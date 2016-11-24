@@ -15,7 +15,24 @@ angular
 		url:"/login",
 		templateUrl:"views/login.html",
 		controller:"loginCtrl"
+	}).state("test",{
+		url:"/test",
+		templateUrl:"views/test.html",
+		controller:"testCtrl"
+	}).state("ui",{
+		url:"/ui",
+		templateUrl:"views/UI.html",
+		controller:"uiCtrl"
+	}).state("web",{
+		url:"/web",
+		templateUrl:"views/web.html",
+		controller:"webCtrl"
+	}).state("bgd",{
+		url:"/bgd",
+		templateUrl:"views/bgd.html",
+		controller:"bgdCtrl"
 	})
+	
 }]);
 
 	

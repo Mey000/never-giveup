@@ -5,6 +5,8 @@ angular.module('quexianguanliApp').controller('loginCtrl',['$scope','$http',func
 			method: "post",
 			data:$scope.upuser
 		}).success(function(){
+//			$rootScope = {}
+//			$rootScope.upuser.username = 
 			
 		})
 	}
