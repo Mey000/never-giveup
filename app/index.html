@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -13,7 +13,18 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/test.css">
+    <link rel="stylesheet" href="styles/background.css">
+    <link rel="stylesheet" href="styles/web.css">
+    <link rel="stylesheet" href="styles/UI.css">
     <!-- endbuild -->
+    <script type="text/javascript">
+			document.documentElement.style.fontSize = innerWidth / 16 + 'px';
+			onresize = function() {
+				document.documentElement.style.fontSize = innerWidth / 16 + 'px';
+			};
+		</script>
   </head>
   <body ng-app="quexianguanliApp">
     <!--[if lte IE 8]>
@@ -21,9 +32,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
     
 	<div ui-view></div>
    
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -44,12 +57,21 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/chart.js/dist/Chart.js"></script>
     <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/test.js"></script>
+        <script src="scripts/controllers/web.js"></script>
+        <script src="scripts/controllers/UI.js"></script>
+        <script src="scripts/controllers/background.js"></script>
+        
+        
+        
         <!-- endbuild -->
 </body>
 </html>
