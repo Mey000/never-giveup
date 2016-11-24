@@ -9,18 +9,30 @@
  * Main module of the application.
  */
 angular
-  .module('quexianguanliApp', ['ui.router'])
-.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
-	
+  .module('quexianguanliApp', ['ui.router']).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+  	$urlRouterProvider.when("","/login")
 	$stateProvider.state("login",{
 		url:"/login",
 		templateUrl:"views/login.html",
-		controller:"login_test"
-	})
-	.state("test",{
+		controller:"loginCtrl"
+	}).state("test",{
 		url:"/test",
 		templateUrl:"views/test.html",
-		controller:"con_test"
+		controller:"testCtrl"
+	}).state("ui",{
+		url:"/ui",
+		templateUrl:"views/UI.html",
+		controller:"uiCtrl"
+	}).state("web",{
+		url:"/web",
+		templateUrl:"views/web.html",
+		controller:"webCtrl"
+	}).state("bgd",{
+		url:"/bgd",
+		templateUrl:"views/bgd.html",
+		controller:"bgdCtrl"
 	})
-$urlRouterProvider.otherwise('/test');
+	
 }]);
+
+	
