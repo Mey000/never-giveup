@@ -19,10 +19,10 @@ angular
 		url:"/test",
 		templateUrl:"views/test.html",
 		controller:"testCtrl"
-	}).state("ui",{
-		url:"/ui",
+	}).state("UI",{
+		url:"/UI",
 		templateUrl:"views/UI.html",
-		controller:"uiCtrl"
+		controller:"UICtrl"
 	}).state("web",{
 		url:"/web",
 		templateUrl:"views/web.html",
@@ -31,8 +31,7 @@ angular
 		url:"/bgd",
 		templateUrl:"views/bgd.html",
 		controller:"bgdCtrl"
-	})
-	
+	})	
 }]);
 
 	
