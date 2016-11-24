@@ -14,8 +14,24 @@ angular
 	$stateProvider.state("login",{
 		url:"/login",
 		templateUrl:"views/login.html",
-		controller:"loginCtrl",
-	})
+		controller:"loginCtrl"
+	}).state("test",{
+		url:"/test",
+		templateUrl:"views/test.html",
+		controller:"testCtrl"
+	}).state("UI",{
+		url:"/UI",
+		templateUrl:"views/UI.html",
+		controller:"UICtrl"
+	}).state("web",{
+		url:"/web",
+		templateUrl:"views/web.html",
+		controller:"webCtrl"
+	}).state("bgd",{
+		url:"/bgd",
+		templateUrl:"views/bgd.html",
+		controller:"bgdCtrl"
+	})	
 }]);
 
 	
