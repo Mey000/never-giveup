@@ -4,9 +4,10 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 			url: "http://www.bugcenter.com.cn:1511/users/login",
 			method: "post",
 			data: $scope.upuser
-		}).success(function() {
+		}).success(function(e) {
 			$rootScope.user={}
 			$rootScope.user.username=$scope.upuser.username
+			$rootScope.user.uid= e.uid
 			$state.go('UI')
 
 		})

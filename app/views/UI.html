@@ -1,37 +1,65 @@
+		<div class="y_box">
+				<div class="y_top">
+					<div class="y_nav" >
+						<span>BugCenter v0.3</span>
+						<p class="glyphicon glyphicon-th-list"></p>
+						
 
-		<div class="y_nav">
-			<span>BugCenter v0.3</span>
-			<p class="glyphicon glyphicon-th-list"></p>
+					</div>
+
+					<div class="y_nt" >
+							<b>当前用户：</b>
+							<span>图表</span>
+							<span ng-click="tc()">退出</span>
+					</div>
+
+				
+				<div class="sou col-lg-6">
+				    <div class="input-group">
+				      <input type="text" class="form-control">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button">搜索</button>
+				      </span>
+					 </div><!-- /input-group -->
+				 </div>
+			</div>	
+		</div>
+		
 			
-
-		</div>
-		<div class="y_nt">
-				<b>当前用户：</b>
-				<span>图表</span>
-				<span>退出</span>
-		</div>
-		<div class="sou col-lg-6">
-		    <div class="input-group">
-		      <input type="text" class="form-control">
-		      <span class="input-group-btn">
-		        <button class="btn btn-default" type="button">搜索</button>
-		      </span>
-			 </div><!-- /input-group -->
-		 </div>
 		 <div class="content">
-		 	<span>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
-		 	<span>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
-		 </div>
-		 <div class="sort">
-		 	<ul class="pagination">
-			    <li><a href="#">&laquo;</a></li>
-			    <li><a href="#">1</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li>
-			    <li><a href="#">4</a></li>
-			    <li><a href="#">5</a></li>
-			    <li><a href="#">&raquo;</a></li>
-			  </ul>
-		 </div>
+		 	<span ng-repeat="i in data"   ng-click="zy($index)" data-toggle="modal" data-target=".bs-example-modal-lg" >
+		 		<p class="cwzy"> <b>错误摘要:{{i.importance}}</b> <d>{{i.status}}</d></p>
+		 		<p>{{i.description}}</p>	
+		 		<p>{{i.date}}</p>
+
+		 	</span>
+			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">		      	
+				      		<ba>简介:{{summary}}</ba>
+				      		<ba>描述:{{description}}</ba>
+				      		<ba>重要性:{{importance}}</ba>
+				      		<ba>发生频率:{{frequency}}</ba>
+				      		<ba>错误的状态:{{status}}</ba>
+				      		<ba>发布人:{{from}}</ba>
+				      		<ba>日期:{{date}}</ba>			      	
+				    </div>
+				  </div>
+		</div>
+
 		  
+</div>
+		 </div>
+		<!--  <div class="sort">
+			<ul class="pagination">
+					    <li><a href="JavaScript:;">&laquo;</a></li>
+					    <li><a href="JavaScript:;" >1</a></li>
+					    <li><a href="JavaScript:;">2</a></li>
+					    <li><a href="JavaScript:;">3</a></li>
+					    <li><a href="JavaScript:;">4</a></li>
+					    <li><a href="JavaScript:;">5</a></li>
+					    <li><a href="JavaScript:;">&raquo;</a></li>
+					  </ul>
+		</div>
+		  -->
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

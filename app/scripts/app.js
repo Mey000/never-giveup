@@ -31,7 +31,7 @@ angular
 		url:"/bgd",
 		templateUrl:"views/bgd.html",
 		controller:"bgdCtrl"
-	})	
+	})
 }]);
 
 	
