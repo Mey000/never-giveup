@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('quexianguanliApp', ['ui.router']).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+  .module('quexianguanliApp', ['ui.router','textAngular']).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
   	$urlRouterProvider.when("","/login")
 	$stateProvider.state("login",{
 		url:"/login",
