@@ -1,9 +1,4 @@
 angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope', '$state', '$http', function($rootScope,$scope, $state, $http) {
-	
-	
-	
-	
-	
 	$scope.isno = false;
 	$scope.isno = false;
 	$scope.submit = function() {
@@ -18,15 +13,25 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 					data: $scope.upuser
 				}).success(function(e) {
 					$scope.un = false;
-	//				$rootScope.user={};
-	//				$rootScope.user.username=$scope.upuser.username;
-	//				$rootScope.user.uid = e.uid;
+					$rootScope.user={};
+					$rootScope.user.username=$scope.upuser.username;
+					$rootScope.user.uid = e.uid;
 					$state.go('UI');	
 				})
 			}
 		}
-		
-			
+//		$http({
+//			url: "http://www.bugcenter.com.cn:1511/users/login",
+//			method: "post",
+//			data: $scope.upuser
+//		}).success(function(e) {
+//			$rootScope.user={}
+//			$rootScope.user.username=$scope.upuser.username
+//			$rootScope.user.uid= e.uid
+//			$state.go('UI')
+//
+//		})
+
 	}
 //		监听事件
 		//$scope.un=true;  
