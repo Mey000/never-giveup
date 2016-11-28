@@ -1,8 +1,86 @@
 <div id="test" >
+		<div class="test-left" ng-if="isopen" ng-click="isclose()"></div>
+		<div class="test_right" ng-if="isopen">
+			<div class="test_title">{{titler}}</div>
+			<div class="choose_list">
+				<ul ng-click="isclose()">
+					<li ng-repeat="i in list[num].content" ng-click="output($event)">{{i.content1}}</li>
+				</ul>
+				<p contenteditable="true" ng-blur="output($event)">
+					
+				</p>
+				<div text-angular ng-model="htmlVariable"></div>
+			</div>
+		</div>
+	
+	
 	<div class="test_head">
-		
+			<span ><i class="glyphicon glyphicon-chevron-left"></i>返回</span>
+			发布bug
+			<span ng-click="commit()">完成</span>
 	</div>
-	<div class="test_search">
+	<div class="bug_div">
+		<div class="bug_row" ng-click="show()">
+			<div class="col-xs-3"><b>summary</b></div>
+			<div class="col-xs-9">
+				<input type="text" ng-model="m.summary"/>
+				<span class="row_r" ng-click="choose($event,0)"><i class="glyphicon glyphicon-chevron-right"></i></span>
+			</div>
+		</div>
+		<div class="bug_row">
+			<div class="col-xs-3"><b>classify</b></div>
+			<div class="col-xs-9">
+				<input type="text" ng-model="classify" placeholder="请选择"/>
+				<span class="row_r" ng-click="choose($event,1)"><i class="glyphicon glyphicon-chevron-right"></i></span>
+			</div>
+		</div>
+		<div class="bug_row">
+			<div class="col-xs-3"><b>importance</b></div>
+			<div class="col-xs-9">
+				<input type="text"  ng-model="importance" placeholder="请选择"/>
+				<span class="row_r" ng-click="choose($event,2)"><i class="glyphicon glyphicon-chevron-right"></i></span>
+			</div>
+		</div>
+		<div class="bug_row">
+			<div class="col-xs-3"><b>description</b></div>
+			<div class="col-xs-9" >
+				<input type="text" ng-model="m.description"/>
+				<span class="row_r" ng-click="choose($event,3)"><i class="glyphicon glyphicon-chevron-right"></i></span>
+			</div>
+		</div>
+		<div class="bug_row">
+			<div class="col-xs-3"><b>frequency</b></div>
+			<div class="col-xs-9">
+				<input type="text" ng-model="frequency" placeholder="请选择"/>
+				<span class="row_r" ng-click="choose($event,4)"><i class="glyphicon glyphicon-chevron-right"></i></span>
+			</div>
+		</div>
+		<div class="bug_row">
+			<div class="col-xs-3"><b>date</b></div>
+			<div class="col-xs-9">
+				<input type="text" placeholder="请选择"  ng-model="m.date" ng-click="showtime()"/>
+				<!--<span class="row_r" ng-click="choose($event,5)"><i class="glyphicon glyphicon-chevron-right"></i></span>-->
+			</div>
+		</div>
+		<div class="bug_row">
+			<div class="col-xs-3"><b>to</b></div>
+			<div class="col-xs-9">
+				<input type="text" placeholder="请选择" ng-model="m.to"/>
+				<span class="row_r" ng-click="choose($event,6)"><i class="glyphicon glyphicon-chevron-right"></i></span>
+			</div>
+		</div>
+		<div class="bug_row">
+			<div class="col-xs-3"><b>status</b></div>
+			<div class="col-xs-9">
+				<input type="text" ng-model="status"/>
+				<span class="row_r" ng-click="choose($event,7)"><i class="glyphicon glyphicon-chevron-right"></i></span>
+			</div>
+		</div>
+	</div>
+	
+</div>	
+	
+   <!--<div class="test_search">
 		<input type="text" placeholder="" class="ipt"/><i class="glyphicon glyphicon-search"></i>
 	</div>
 
@@ -18,5 +96,4 @@
 	</div>
 	<div class="add_bug">
 		<div class="test_rect1"><i class="glyphicon glyphicon-plus"></i></div>
-	</div>
-</div>	
+	</div>              -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

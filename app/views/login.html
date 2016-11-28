@@ -8,12 +8,17 @@
 	<span class="zhh_box">
 		<div class="zhh_emile"><i class="glyphicon glyphicon-user"></i></div>
 		<input type="text" placeholder="Email address" ng-model='upuser.username' id="zh_text"/>
+		<span class="glyphicon glyphicon-remove" id="no"></span>
+		<span class="glyphicon glyphicon-ok" id="yes"></span>
 	</span>
 	<span class="zhh_box">
 		<div class="zhh_emile"><i class="glyphicon glyphicon-eye-close"></i></div>
-		<input type="password" placeholder="Password"  ng-model='upuser.password' id="zh_pad"/>
+		<input type="password" placeholder="Password"  ng-model='upuser.password' id="zh_password"/>
+		<span class="glyphicon glyphicon-remove" id="noa"></span>
+		<span class="glyphicon glyphicon-ok" id="yesa"></span>
 	</span>
-	<a href="javascript:;" class="btn btn-primary btn-lg btn-block" id="but" ng-click="submit()" >Sign in</a>
+	<a href="javascript:;" class="btn btn-primary btn-lg btn-block" id="but" ng-click="submit()" ng-disabled="un">Sign in</a>
+	
 </div>
 <!--<div class="zhh_top">
 			<i class="glyphicon glyphicon-chevron-left"></i>
@@ -28,3 +33,4 @@
 			</span>
 			<button type="button" class="btn btn-primary btn-lg btn-block" id="but">Sign in</button>
 		</div>-->
+>>>>>>> origin/HEAD
