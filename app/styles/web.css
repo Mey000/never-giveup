@@ -1,0 +1,94 @@
+.test_search{
+	
+	width: 16rem;
+	padding:1rem;
+	background: #f0f0f0;
+	position: relative;
+}
+.test_search .ipt{
+	text-indent: 0.5rem;
+	width: 14rem;
+	border-radius: 1.5rem;
+	outline: none;
+	height: 1.4rem;
+}
+.test_search i{
+	position: absolute;
+	right: 2rem;
+	top: 1.35rem;
+	font-size: 0.75rem;
+	
+}
+.test_activebug{
+	width: 100%;
+	height: 3.5rem;
+	
+}
+.test_activebug p{
+	width: 11rem;
+	float: left;
+	line-height: 2.5rem;
+	margin: 0.5rem 0;
+	border-bottom: solid 0.05rem #eee;
+}
+.test_activebug span{
+	line-height: 3.5rem;
+	display: block;
+	float: left;
+	
+}
+.test_rect{
+	width: 2.5rem;
+	height: 2.5rem;
+	background: #00aeef;
+	border-radius: 0.3rem;
+	float: left;
+	margin: 0.5rem ;
+}
+.test_rect i{
+	color: #fff;
+	font-size: 1.5rem;
+	margin: 0.5rem;
+}
+.test_allbug{
+	width: 100%;
+	height: 3.5rem;
+}
+.test_allbug p{
+	width: 11rem;
+	float: left;
+	line-height: 2.5rem;
+	margin: 0.5rem 0;
+	border-bottom: solid 0.05rem #eee;
+}
+.test_allbug span{
+	line-height: 3.5rem;
+	display: block;
+	float: left;
+	
+}
+.test_activebug span i{
+	color: #00aeef;
+}
+.test_allbug span i{
+	color: #00aeef;
+}
+.add_bug{
+	width: 100%;
+	height: 3.5rem;
+	
+}
+.add_bug .test_rect1{
+	    width: 2.5rem;
+    height: 2.5rem;
+    background: #00aeef;
+    border-radius: 1.25rem;
+    float: left;
+    margin: 0.5rem 0 0 6.75rem;
+    padding: 0.5rem 0 0 0.58rem;
+}
+.add_bug .test_rect1 i{
+	color: #fff;
+	font-size: 1.5rem;
+	
+}
