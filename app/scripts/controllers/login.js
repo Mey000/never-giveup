@@ -1,5 +1,8 @@
 angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope', '$state', '$http', function($rootScope,$scope, $state, $http) {
 	$scope.un = false;
+angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope', '$state', '$http', 'locals',function($rootScope,$scope, $state, $http,locals) {
+	$scope.isno = false;
+	$scope.isno = false;
 	$scope.submit = function() {
 		//console.log("1")
 		if(zh_text.value==''||zh_password.value==''){
@@ -15,7 +18,10 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 					$scope.un = false;
 					$rootScope.user={};
 					$rootScope.user.username=$scope.upuser.username;
-					$rootScope.user.uid = e.uid;
+					locals.set("username",$scope.upuser.username);
+					locals.set("password",$scope.upuser.password);
+					locals.set("uid",e.uid);
+//					$rootScope.user.uid = e.uid;
 					$state.go('UI');	
 				})
 			}
@@ -62,8 +68,17 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 	        }else{  
 	            $scope.un=true;  
 	        }  
+<<<<<<< HEAD
 	    },true);  */
 	    
+
+	    },false);  
+	 
+	//enter
+//	document.onkeydown=function(e){
+//		var keycode=document.all?event.keyCode:e.which;
+//		if(keycode==13).search();
+//	}
 	//用户判断
 	var zh_word, zh_words = false;
 	zh_text.onblur = function() {
@@ -101,5 +116,21 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 		}		
 	}
 	
-}])
+}]).factory('locals',['$window',function($window){
+      return{        //存储单个属性
+        set :function(key,value){
+          $window.localStorage[key]=value;
+        },        //读取单个属性
+        get:function(key,defaultValue){
+          return  $window.localStorage[key] || defaultValue;
+        },        //存储对象，以JSON格式存储
+        setObject:function(key,value){
+          $window.localStorage[key]=JSON.stringify(value);
+        },        //读取对象
+        getObject: function (key) {
+          return JSON.parse($window.localStorage[key] || '{}');
+        }
+      }
+  }]);
+
 
