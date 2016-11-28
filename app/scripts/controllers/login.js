@@ -110,3 +110,4 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
         }
       }
   }]);
+

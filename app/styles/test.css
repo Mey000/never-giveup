@@ -1,98 +1,99 @@
 #test{
 	width: 16rem;
 	height: auto;
-}
-#test span,#test p{
-	font-size: 0.75rem;
+	position:relative;
 }
 .test_head{
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 16rem;
 	height: 2.5rem;
 	background: #00aeef;
-}
-.test_search{
-	
-	width: 16rem;
-	padding:1rem;
-	background: #f0f0f0;
-	position: relative;
-}
-.test_search .ipt{
-	text-indent: 0.5rem;
-	width: 14rem;
-	border-radius: 1.5rem;
-	outline: none;
-	height: 1.4rem;
-}
-.test_search i{
-	position: absolute;
-	right: 2rem;
-	top: 1.35rem;
-	font-size: 0.75rem;
-	
-}
-.test_activebug{
-	width: 100%;
-	height: 3.5rem;
-	
-}
-.test_activebug p{
-	width: 11rem;
-	float: left;
-	line-height: 2.5rem;
-	margin: 0.5rem 0;
-}
-.test_activebug span{
-	line-height: 3.5rem;
-	display: block;
-	float: left;
-	
-}
-.test_rect{
-	width: 2.5rem;
-	height: 2.5rem;
-	background: #00aeef;
-	border-radius: 0.3rem;
-	float: left;
-	margin: 0.5rem ;
-}
-.test_rect i{
 	color: #fff;
-	font-size: 1.5rem;
-	margin: 0.5rem;
-}
-.test_allbug{
-	width: 100%;
-	height: 3.5rem;
-}
-.test_allbug p{
-	width: 11rem;
-	float: left;
 	line-height: 2.5rem;
-	margin: 0.5rem 0;
+	text-align: center;
+	padding: 0 0.3rem;
+	box-sizing: border-box;
 }
-.test_allbug span{
-	line-height: 3.5rem;
-	display: block;
+
+.test_head span:nth-child(1){
 	float: left;
+}
+.test_head span:nth-child(2){
+	float: right;
 	
 }
-.add_bug{
+.bug_div{
+	padding-top: 2.5rem;
+	overflow: auto;
+}
+.bug_div .bug_row{
 	width: 100%;
-	height: 3.5rem;
-	
-}
-.add_bug .test_rect1{
-	    width: 2.5rem;
-    height: 2.5rem;
-    background: #00aeef;
-    border-radius: 1.25rem;
+	border-top: solid .5rem #eee;
+    padding: .5rem 0rem .5rem 0rem;
     float: left;
-    margin: 0.5rem 0 0 6.75rem;
-    padding: 0.5rem 0 0 0.58rem;
 }
-.add_bug .test_rect1 i{
-	color: #fff;
-	font-size: 1.5rem;
+.bug_div .bug_row input{
+	text-indent: 0.5rem;
+	border:none;
+	outline: none;
+	width: 90%;
+	float: left;
+}
+.bug_div .bug_row i{
+	color: #00aeef;
+}
+.bug_div .bug_row .row_r{
+	width: 10%;
+	float: right;
+}
+
+.test-left{
+	width: 5rem;
+	position: absolute;
+    left: 0rem;
+    top: 0rem;
+    bottom: 0rem;
+    background: #000000;
+    opacity: 0.4;
+    float: left;
+    z-index: 9;
+    overflow: auto;
+}
+.test_right{
+	 position: absolute;
+    width: 11rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #fff;
+    z-index: 9;
+    float: right;
+}
+.test_title{
+	width: 100%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+	border-bottom: 0.05rem solid #ccc;
+	font-size:.8rem;
+}
+.choose_list{
+	width: 100%;
+	height: auto;
+}
+.choose_list p{
+	margin: 0.5rem 0.8rem;
+	line-height: 1.5rem;
+	min-height: 2rem;
+}
+.choose_list ul li{
+	text-indent: 0.5rem;
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	border-bottom: 0.05rem solid #ccc;
 	
 }
