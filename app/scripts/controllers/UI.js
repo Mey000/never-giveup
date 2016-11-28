@@ -1,19 +1,20 @@
 angular.module('quexianguanliApp').controller('UICtrl',['$scope','$state','$http','$rootScope','locals',function($scope,$state,$http,$rootScope,locals){
 	
 		$http({
-    		url:"http://www.bugcenter.com.cn:1511/users/"+locals.set.uid,
+    		url:"http://www.bugcenter.com.cn:1511/users/"+locals.get.uid,
     		method:"get"
   		}).success(function(e){
-    		
+    		console.log(e)
   		})
 
 		  $http({
 		    url:"http://www.bugcenter.com.cn:1511/item",
 		    method:"get",
-		    params:{'to':$rootScope.user.username}
+		    params:{'to':locals.get.username}
 		  }).success(function(e){
+		  	console.log(e)
 			 $scope.data=e
-			 
+			
 			 $scope.zy=function(n){
 			 	$scope.aaa=e[n]
 			 	$scope.summary=$scope.aaa.summary;
