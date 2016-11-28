@@ -14,7 +14,7 @@
 .y_nt b{display: block;width: 100%;height:2rem;color:#b8b8b8;line-height: 2rem;padding-left: 0.7rem;}
 .y_nt span{display: block;width: 100%;height:2rem;color:#b8b8b8;line-height: 2rem;padding-left: 0.7rem;}
 .sou{margin-top: 1rem;}			
-.content{margin:0.95rem 0.625rem ;border:0.025rem solid #ccc;height:auto;    border-radius:0.2rem;}
+.content{margin:0.95rem 0.76rem ;border:0.025rem solid #ccc;height:auto;    border-radius:0.2rem;}
 .content span{display: block;border-bottom:0.025rem solid #ccc;padding:0.95rem 0.625rem ;word-wrap : break-word ;}
 .cwzy{height: 1rem;overflow: hidden; width: 100%}
 .cwzy b{float: left; }
