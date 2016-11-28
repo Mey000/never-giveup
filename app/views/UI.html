@@ -18,7 +18,7 @@
 				    <div class="input-group">
 				      <input type="text" class="form-control">
 				      <span class="input-group-btn">
-				        <button class="btn btn-default" type="button">搜索</button>
+				        <button class="btn btn-default" ng-model="hh" type="button">搜索</button>
 				      </span>
 					 </div><!-- /input-group -->
 				 </div>
@@ -27,15 +27,16 @@
 		
 			
 		 <div class="content">
-		 	<span ng-repeat="i in data"   ng-click="zy($index)" data-toggle="modal" data-target=".bs-example-modal-lg" >
-		 		<p class="cwzy"> <b>错误摘要:{{i.importance}}</b> <d>{{i.status}}</d></p>
-		 		<p>{{i.description}}</p>	
-		 		<p>{{i.date}}</p>
+		 	<span ng-repeat="i in data | filter:{summary:hh}"   ng-click="zy($index)" data-toggle="modal" data-target=".bs-example-modal-lg" >
+		 		<p class="cwzy"> <b><zh>错误摘要</zh><a  href="JavaScript:;" ng-class="{red:i.importance=='重要',yellow:i.importance=='中等',blue:i.importance=='一般'}">{{i.importance}}</a></span></b> <d >{{i.status 
+}}</d></p>
+		 		<p >{{i.description|substr}}</p>	
+		 		<p><zh>{{i.date}}</zh> </p>
 
 		 	</span>
 			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg">
-				    <div class="modal-content">		      	
+				  <div class="modl modal-dialog modal-lg">
+				    <div class="ba modal-content">		      	
 				      		<ba>简介:{{summary}}</ba>
 				      		<ba>描述:{{description}}</ba>
 				      		<ba>重要性:{{importance}}</ba>
@@ -44,7 +45,9 @@
 				      		<ba>发布人:{{from}}</ba>
 				      		<ba>日期:{{date}}</ba>			      	
 				    </div>
+				     <div class="xiugai" ng-click="jiejue(id)">解决</div>
 				  </div>
+				 
 		</div>
 
 		  
@@ -63,4 +66,4 @@
 		</div>
 		  -->
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
->>>>>>> origin/HEAD
+

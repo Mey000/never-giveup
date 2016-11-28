@@ -1,9 +1,9 @@
 angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope', '$state', '$http', function($rootScope,$scope, $state, $http) {
-	$scope.isno = false;
-	$scope.isno = false;
+	$scope.un = false;
 	$scope.submit = function() {
+		//console.log("1")
 		if(zh_text.value==''||zh_password.value==''){
-//			$scope.un = true;
+			//$scope.un = true;
 		}else{
 			if((/^[a-zA-Z]+$/.test(zh_text.value) || /^1[34578]{1}\d{9}$/.test(zh_text.value) || /![@#\$%\^&\*]+/g.test(zh_text.value) && zh_text.value!='') && (/[a-z0-9_]{6,12}$/g.test(zh_password.value) && zh_password.value!='' )){
 //				$scope.un = false;
@@ -20,6 +20,22 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 				})
 			}
 		}
+		
+	/*	$scope.blure1 = function () {
+				 
+                $scope.upuser="";  
+			    $scope.mobileVal=function(){  
+			        return $scope.upuser;  
+			    };  
+			    $scope.$watch($scope.mobileVal,function(newValue,oldValue){  
+			        var regex = /^[a-zA-Z]+$/ ;  
+			        if(regex.test(newValue)){  
+			            $scope.un=false;  
+			        }else{  
+			            $scope.un=true;  
+			        }  
+			    },true);  
+         }*/
 //		$http({
 //			url: "http://www.bugcenter.com.cn:1511/users/login",
 //			method: "post",
@@ -35,7 +51,7 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 	}
 //		监听事件
 		//$scope.un=true;  
-	    $scope.upuser="";  
+	   /* $scope.upuser="";  
 	    $scope.mobileVal=function(){  
 	        return $scope.upuser;  
 	    };  
@@ -46,7 +62,7 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 	        }else{  
 	            $scope.un=true;  
 	        }  
-	    },true);  
+	    },true);  */
 	    
 	//用户判断
 	var zh_word, zh_words = false;
@@ -86,4 +102,4 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 	}
 	
 }])
->>>>>>> origin/HEAD
+

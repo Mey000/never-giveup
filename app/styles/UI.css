@@ -1,4 +1,5 @@
 *{margin: 0;padding: 0;}
+a{list-style: none;}
 .y_box{    margin-bottom: 5.2rem;}
 .y_top{position: fixed;left: 0;top: 0;width: 100%;background: #fff;}
 			.y_nav{
@@ -21,6 +22,14 @@
 .cwzy d{float: right;}
 .content span:last-child{border-bottom:none;}
 
-.content ba{display: block;border-bottom:0.025rem solid #ccc;padding:0.95rem 0.3rem ;word-wrap : break-word ;}
-.content ba:last-child{border-bottom:none;}
+.content ba{display: block;border-bottom:0.025rem solid #ccc;padding:0.6rem 0.3rem ;word-wrap : break-word ;}
+.modl{width: 13rem;margin:2.3rem auto;}
+.ba{border-radius:0.5rem 0.5rem 0 0 ;}
+.xiugai{width: 13rem;height:2rem;line-height:2rem;text-align: center;background: #337ab7;border-radius: 0 0 0.5rem 0.5rem;color: #fff;margin: auto;}
 
+.content ba:last-child{border-bottom:none;}
+.cwzy a{display: block;width: 2rem;height: 1rem;float: left;color: #fff;border-radius: 0.125rem ;line-height: 1rem;text-align: center;margin-left: 0.2rem;}
+.red{background:#DD5249;}
+.yellow{background: #F0AC4B;}
+.blue{background:#5CC0DD ;}
+.cwzy zh{float: left;}
