@@ -27,6 +27,7 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 					    url:"http://www.bugcenter.com.cn:1511/users/"+e.uid,
 					    method:"get"
 					  }).success(function(e){
+					  	locals.set("name",e.charactor);
 					    if(e.charactor==3){
 					     $state.go('web')
 					    }else{
