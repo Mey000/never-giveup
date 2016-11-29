@@ -19,5 +19,7 @@ angular.module('quexianguanliApp').controller("webCtrl",['$scope','$state','$htt
 $scope.add_bug=function(){
 	 $state.go('test')
 }
-
+$scope.show_all_bug=function(){
+	 $state.go('bgd')
+}
 }])

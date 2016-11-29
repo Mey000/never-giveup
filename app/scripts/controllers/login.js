@@ -22,7 +22,17 @@ angular.module('quexianguanliApp').controller('loginCtrl', ['$rootScope','$scope
 					locals.set("password",$scope.upuser.password);
 					locals.set("uid",e.uid);
 					$rootScope.user.uid = e.uid;
-					$state.go('UI');	
+					//$state.go('UI');
+					  $http({
+					    url:"http://www.bugcenter.com.cn:1511/users/"+e.uid,
+					    method:"get"
+					  }).success(function(e){
+					    if(e.charactor==3){
+					     $state.go('web')
+					    }else{
+					     $state.go('UI')	
+					    }
+					  })
 				})
 			}
 		}
