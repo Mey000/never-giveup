@@ -1,5 +1,5 @@
 angular.module('quexianguanliApp').controller('bgdCtrl',['$scope','$state','$http','$rootScope','locals',function($scope,$state,$http,$rootScope,locals){
-	
+	$scope.username=locals.get("username","");
 		$http({
     		url:"http://www.bugcenter.com.cn:1511/users/"+locals.get("uid",""),
     		method:"get"

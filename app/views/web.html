@@ -1,45 +1,39 @@
 <div class="y_box">
 	<div class="y_top">
-		<div class="y_nav" >
+		<div class="y_nav">
 			<span>BugCenter v0.3</span>
 			<p class="glyphicon glyphicon-th-list"></p>
 		</div>
-		<div class="y_nt" >
-				<b>当前用户：</b>
-				<span>图表</span>
-				<span ng-click="tc()">退出</span>
+		<div class="y_nt">
+			<b>当前用户：{{username}}</b>
+			<span ng-click="tc()">退出</span>
 		</div>
-	<div class="sou col-lg-6">
-	    <div class="input-group">
-	      <input type="text" class="form-control">
-	      <span class="input-group-btn">
+
+	</div>
+</div>
+<div class="sou col-lg-6">
+	<div class="input-group">
+		<input type="text" class="form-control">
+		<span class="input-group-btn">
 	        <button class="btn btn-default" type="button">搜索</button>
 	      </span>
-		 </div>
-	 </div>
-	 </div>
-</div>	
-	
-<!--****************************************-->
-	<!--<div class="test_search">
-		<input type="text" placeholder="" class="ipt"/><i class="glyphicon glyphicon-search"></i>
-	</div>-->
-
-	<div class="test_activebug" ng-click="show_all_bug()">
-		<div class="test_rect"><i class="glyphicon glyphicon-flash"></i></div>
-		<p>全部bug</p>
-		<span><i class="glyphicon glyphicon-chevron-right"></i></span>
 	</div>
-	<div class="test_activebug">
-		<div class="test_rect"><i class="glyphicon glyphicon-flash"></i></div>
-		<p>活动bug</p>
-		<span><i class="glyphicon glyphicon-chevron-right"></i></span>
-	</div>
-	<div class="test_allbug">
-		<div class="test_rect"><i class="glyphicon glyphicon-picture"></i></div>
-		<p>bug图表</p>
-		<span><i class="glyphicon glyphicon-chevron-right"></i></span>
-	</div>
-	<div class="add_bug">
-		<div class="test_rect1"><i class="glyphicon glyphicon-plus" ng-click="add_bug()"></i></div>
-	</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+</div>
+<div class="test_activebug" ng-click="show_all_bug()">
+	<div class="test_rect"><i class="glyphicon glyphicon-flash"></i></div>
+	<p>全部bug</p>
+	<span><i class="glyphicon glyphicon-chevron-right"></i></span>
+</div>
+<div class="test_activebug" ng-click="show_active_bug()">
+	<div class="test_rect"><i class="glyphicon glyphicon-flash"></i></div>
+	<p>活动bug</p>
+	<span><i class="glyphicon glyphicon-chevron-right"></i></span>
+</div>
+<div class="test_allbug" ng-click="show_pic_bug()">
+	<div class="test_rect"><i class="glyphicon glyphicon-picture"></i></div>
+	<p>bug图表</p>
+	<span><i class="glyphicon glyphicon-chevron-right"></i></span>
+</div>
+<div class="add_bug">
+	<div class="test_rect1"><i class="glyphicon glyphicon-plus" ng-click="add_bug()"></i></div>
+</div>

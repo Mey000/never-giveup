@@ -97,3 +97,14 @@
 	border-bottom: 0.05rem solid #ccc;
 	
 }
+.accordion-heading{
+	padding: 0.5rem 0.8rem;
+	background: #EEEEEE;
+	border-bottom: 0.05rem solid #fff;
+}
+.pic_show{
+	padding: 0.5rem 0.8rem;
+	color: #fff;
+	background: #00aeef;
+	font-weight: 600;
+}

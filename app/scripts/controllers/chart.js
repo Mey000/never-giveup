@@ -1,0 +1,81 @@
+angular.module('quexianguanliApp')
+.controller('chartCtrl',['$scope','$state','$http','locals',function($scope,$state,$http,locals){
+	$scope.username=locals.get("username","");
+		  $(".y_nav p").click(function(){
+				$(".y_nt").toggle();
+			});
+		  $scope.tc=function(){
+		  	$state.go('login')
+		  }
+}])
+.controller('PolarAreaCtrl',['$scope','$http',function($scope,$http){
+	$scope.data=[]
+	$http({
+		    url:"http://www.bugcenter.com.cn:1511/item",
+		    method:"get",
+		    params:{importance:0}
+		  }).success(function(e){
+			 $scope.data[0]=e.length
+		  })
+	$http({
+		    url:"http://www.bugcenter.com.cn:1511/item",
+		    method:"get",
+		    params:{importance:1}
+		  }).success(function(e){
+			 $scope.data[1]=e.length
+		  })
+	$http({
+		    url:"http://www.bugcenter.com.cn:1511/item",
+		    method:"get",
+		    params:{importance:2}
+		  }).success(function(e){
+			 $scope.data[2]=e.length
+		  })	  
+	$scope.labels = ["重要", "中等", "一般"];
+		
+	
+}])
+.controller('PieCtrl',['$scope','$http',function($scope,$http){
+	$scope.data=[]
+	$scope.labels = ["偶尔", "经常"];
+	$http({
+		    url:"http://www.bugcenter.com.cn:1511/item",
+		    method:"get",
+		    params:{'frequency':'0'}
+		  }).success(function(e){
+			 $scope.data[0]=e.length
+		  })
+	$http({
+		    url:"http://www.bugcenter.com.cn:1511/item",
+		    method:"get",
+		    params:{'frequency':'1'}
+		  }).success(function(e){
+			 $scope.data[1]=e.length
+		  })
+	
+}])
+.controller('RadarCtrl',['$scope','$http',function($scope,$http){
+	$scope.data=[]
+	$scope.labels = ["已指派", "已解决", "已关闭"];
+		$http({
+		    url:"http://www.bugcenter.com.cn:1511/item",
+		    method:"get",
+		   params:{'status':'0'}
+		  }).success(function(e){
+			 $scope.data[0]=e.length
+		  })
+	$http({
+		    url:"http://www.bugcenter.com.cn:1511/item",
+		    method:"get",
+		    params:{'status':'1'}
+		  }).success(function(e){
+			 $scope.data[1]=e.length
+		  })
+	$http({
+		    url:"http://www.bugcenter.com.cn:1511/item",
+		    method:"get",
+		    params:{'status':'2'}
+		  }).success(function(e){
+			 $scope.data[2]=e.length
+		  })	  
+}])

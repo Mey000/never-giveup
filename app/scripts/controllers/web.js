@@ -1,25 +1,18 @@
 angular.module('quexianguanliApp').controller("webCtrl",['$scope','$state','$http','$rootScope','locals',function($scope,$state,$http,$rootScope,locals){
-//	console.log(locals.get("uid",""));
-//$http({
-//  url:"http://www.bugcenter.com.cn:1511/users/"+locals.get("uid",""),
-//  method:"get"
-//}).success(function(e){
-//  if(e.charactor==3){
-//    $scope.isshow=true
-//  }
-//})
-//console.log(locals.get("username",""));
-//$http({
-//  url:"http://www.bugcenter.com.cn:1511/item",
-//  method:"get",
-//  params:{'to':locals.get("username","")}
-//}).success(function(e){
-//  $scope.data=e
-//})
+	$scope.username=locals.get("username","");
 $scope.add_bug=function(){
 	 $state.go('test')
 }
 $scope.show_all_bug=function(){
 	 $state.go('bgd')
 }
+$scope.show_active_bug=function(){
+	 $state.go('list')
+}
+$scope.show_pic_bug=function(){
+	 $state.go('chart')
+}
+ $(".y_nav p").click(function(){
+				$(".y_nt").toggle();
+			});
 }])

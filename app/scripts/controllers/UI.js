@@ -3,8 +3,7 @@ angular.module('quexianguanliApp').controller('UICtrl',['$scope','$state','$http
     		url:"http://www.bugcenter.com.cn:1511/users/"+locals.get("uid",""),
     		method:"get"
   		}).success(function(e){
-    		console.log(e)
-  		})
+    	})
 		  $http({
 		    url:"http://www.bugcenter.com.cn:1511/item",
 		    method:"get",
