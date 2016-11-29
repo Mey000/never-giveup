@@ -40,13 +40,10 @@ angular.module('quexianguanliApp').controller('UICtrl',['$scope','$state','$http
 			
 			 	if(e[i].importance==0){
 				 	e[i].importance="重要";
-				 	$scope.Name="red";
 				 }else if(e[i].importance==1){
 				 	e[i].importance="中等";
-				 	$scope.Name="yellow";
 				 }else if(e[i].importance==2){
 				 	e[i].importance="一般";
-				 	$scope.Name="blue";
 				 }
 
 
@@ -55,11 +52,14 @@ angular.module('quexianguanliApp').controller('UICtrl',['$scope','$state','$http
 		    	if(e[i].status==0){
 		    		e[i].status="已指派";
 		    		
+		    		
 		    	}else if(e[i].status==1){
 		    		e[i].status="已解决";
 		    		
+		    		
 		    	}else{
 		    		e[i].status="已关闭";
+		    		
 		    		
 		    		
 		    	}
@@ -94,27 +94,14 @@ angular.module('quexianguanliApp').controller('UICtrl',['$scope','$state','$http
 		  
 }]).filter("substr",function(){
 	return function(e){
-	if(e.length>40){
-			return e.slice(0,40)+"..."
-		}else{
-			return e
-		}
+		if(e!=""){
+			if(e.length>40){
+					return e.slice(0,40)+"..."
+				}else{
+					return e
+				}
+			}
 	}
-	}).factory('locals',['$window',function($window){
-      return{        //存储单个属性
-        set :function(key,value){
-          $window.localStorage[key]=value;
-        },        //读取单个属性
-        get:function(key,defaultValue){
-          return  $window.localStorage[key] || defaultValue;
-        },        //存储对象，以JSON格式存储
-        setObject:function(key,value){
-          $window.localStorage[key]=JSON.stringify(value);
-        },        //读取对象
-        getObject: function (key) {
-          return JSON.parse($window.localStorage[key] || '{}');
-        }
-      }
-  }]);
-
+	
+	})
 

@@ -16,9 +16,9 @@
 				
 				<div class="sou col-lg-6">
 				    <div class="input-group">
-				      <input type="text" class="form-control">
+				      <input type="text" ng-model="hh" class="form-control">
 				      <span class="input-group-btn">
-				        <button class="btn btn-default" ng-model="hh" type="button">搜索</button>
+				        <button class="btn btn-default"  type="button">搜索</button>
 				      </span>
 					 </div><!-- /input-group -->
 				 </div>
@@ -37,7 +37,7 @@
 			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				  <div class="modl modal-dialog modal-lg">
 				    <div class="ba modal-content">		      	
-				      		<i>简介:{{summary}}</ba>
+				      		<ba>简介:{{summary}}</ba>
 				      		<ba>描述:{{description}}</ba>
 				      		<ba>重要性:{{importance}}</ba>
 				      		<ba>发生频率:{{frequency}}</ba>
@@ -45,7 +45,7 @@
 				      		<ba>发布人:{{from}}</ba>
 				      		<ba>日期:{{date}}</ba>			      	
 				    </div>
-				     <div class="xiugai" ng-click="jiejue(id)">解决</div>
+				     <div class="xiugai" ng-click="jiejue(id)" ng-show="status=='已指派'">解决</div>
 				  </div>
 				 
 		</div>
