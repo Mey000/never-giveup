@@ -1,74 +1,45 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-		<script type="text/javascript">
-			document.documentElement.style.fontSize = innerWidth / 16 + 'px';
-			onresize = function() {
-				document.documentElement.style.fontSize = innerWidth / 16 + 'px';
-			};
-		</script>
-		<style>
-		*{margin: 0;padding: 0;}
-			.y_nav{
-				height: 1.8rem;
-				width: 100%;
-				background: #222222;
-				border-bottom: 0.025rem solid #232323;
-
-			}
-			.y_nav span{float: left;display: block;height:1.6rem; ;font-size: 0.5rem;color: #fff;padding-left: 0.75rem;line-height: 1.6rem;}
-			.y_nav p{float: right;width: 1.8rem;height: 1.6rem;background: #333333;color: #ffffff;line-height: 1.6rem;text-align: center;margin-right: 0.75rem;border-radius: 0.125rem;}
-			.y_nt{width: 100%;height:7rem;background: #222222;border-top: 0.025rem solid #363636; }
-			.y_nt b{display: block;width: 100%;height:2rem;color:#b8b8b8;line-height: 2rem;padding-left: 0.7rem;}
-			.y_nt span{display: block;width: 100%;height:2rem;color:#b8b8b8;line-height: 2rem;padding-left: 0.7rem;}
-			.sou{margin-top: 1rem;}
-			
-			.content{margin:0.95rem 0.625rem ;border:0.025rem solid #ccc;height:auto;    border-radius:0.2rem;}
-			.content span{display: block;border-bottom:0.025rem solid #ccc;padding:0.95rem 0.625rem ;word-wrap : break-word ;}
-			.content span:last-child{border-bottom:none;}
-			
-
-		</style>
-	</head>
-	<body>
-		<div class="y_nav">
+<div class="y_box">
+	<div class="y_top">
+		<div class="y_nav" >
 			<span>BugCenter v0.3</span>
 			<p class="glyphicon glyphicon-th-list"></p>
-			
-
 		</div>
-		<div class="y_nt">
+		<div class="y_nt" >
 				<b>当前用户：</b>
 				<span>图表</span>
-				<span>退出</span>
+				<span ng-click="tc()">退出</span>
 		</div>
-		<div class="sou col-lg-6">
-		    <div class="input-group">
-		      <input type="text" class="form-control">
-		      <span class="input-group-btn">
-		        <button class="btn btn-default" type="button">搜索</button>
-		      </span>
-			 </div><!-- /input-group -->
+	<div class="sou col-lg-6">
+	    <div class="input-group">
+	      <input type="text" class="form-control">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button">搜索</button>
+	      </span>
 		 </div>
-		 <div class="content">
-		 	<span ng-repeat="i in data" ng-click="xiufu(i.id)">{{i.summary + i.importance}}</span>
-		 	
-		 </div>
-		 <div class="sort">
-		 	<ul class="pagination">
-			    <li><a href="#">&laquo;</a></li>
-			    <li><a href="#">1</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li>
-			    <li><a href="#">4</a></li>
-			    <li><a href="#">5</a></li>
-			    <li><a href="#">&raquo;</a></li>
-			  </ul>
-		 </div>
-		  
-	</body>
-</html>
+	 </div>
+	 </div>
+</div>	
+	
+<!--****************************************-->
+	<!--<div class="test_search">
+		<input type="text" placeholder="" class="ipt"/><i class="glyphicon glyphicon-search"></i>
+	</div>-->
+
+	<div class="test_activebug" ng-click="show_all_bug()">
+		<div class="test_rect"><i class="glyphicon glyphicon-flash"></i></div>
+		<p>全部bug</p>
+		<span><i class="glyphicon glyphicon-chevron-right"></i></span>
+	</div>
+	<div class="test_activebug">
+		<div class="test_rect"><i class="glyphicon glyphicon-flash"></i></div>
+		<p>活动bug</p>
+		<span><i class="glyphicon glyphicon-chevron-right"></i></span>
+	</div>
+	<div class="test_allbug">
+		<div class="test_rect"><i class="glyphicon glyphicon-picture"></i></div>
+		<p>bug图表</p>
+		<span><i class="glyphicon glyphicon-chevron-right"></i></span>
+	</div>
+	<div class="add_bug">
+		<div class="test_rect1"><i class="glyphicon glyphicon-plus" ng-click="add_bug()"></i></div>
+	</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

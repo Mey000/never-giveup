@@ -1,39 +1,36 @@
-		<div class="y_box">
-				<div class="y_top">
-					<div class="y_nav" >
-						<span>BugCenter v0.3</span>
-						<p class="glyphicon glyphicon-th-list"></p>
-						
+<div class="y_box">
+	<div class="y_top">
+		<div class="y_nav">
+			<span>BugCenter v0.3</span>
+			<p class="glyphicon glyphicon-th-list"></p>
 
-					</div>
+		</div>
+		<div class="y_nt">
+			<b>当前用户：{{name}}</b>
+			<span ng-click="tc()">退出</span>
+		</div>
 
-					<div class="y_nt" >
-							<b>当前用户：</b>
-							<span>图表</span>
-							<span ng-click="tc()">退出</span>
-					</div>
-
-				
-				<div class="sou col-lg-6">
-				    <div class="input-group">
-				      <input type="text" ng-model="hh" class="form-control">
-				      <span class="input-group-btn">
+		
+	</div>
+</div>
+		<div class="sou col-lg-6">
+			<div class="input-group">
+				<input type="text" class="form-control">
+				<span class="input-group-btn">
 				        <button class="btn btn-default"  type="button">搜索</button>
 				      </span>
-					 </div><!-- /input-group -->
-				 </div>
-			</div>	
-		</div>
-		
-			
+			</div>
+			<!-- /input-group -->
+		</div>	
 		 <div class="content">
-		 	<span ng-repeat="i in data | filter:hh"   ng-click="zy($index)" data-toggle="modal" data-target=".bs-example-modal-lg" >
-		 		<p class="cwzy"> <b><zh>错误摘要</zh><a  href="JavaScript:;" ng-class="{red:i.importance=='重要',yellow:i.importance=='中等',blue:i.importance=='一般'}">{{i.importance}}</a></span></b> <d>{{i.status 
-}}</d></p>
-		 		<p >{{i.description|substr}}</p>	
-		 		<p>{{i.date}}</p>
+		 	
 
+		 	<span ng-repeat="i in data | mky:a:3"  ng-click="zy($index)" data-toggle="modal" data-target=".bs-example-modal-lg" >
+		 		<p class="cwzy"> <b><zh>错误摘要</zh><a  href="JavaScript:;" ng-class="{red:i.importance=='重要',yellow:i.importance=='中等',blue:i.importance=='一般'}">{{i.importance}}</a></b> </p>
+		 		<p >{{i.description}}</p>	
+		 		<p class="da_1"><zh>{{i.date}}</zh> <b>{{i.status}}</b></p> 
 		 	</span>
+		 	
 			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				  <div class="modl modal-dialog modal-lg">
 				    <div class="ba modal-content">		      	
@@ -45,25 +42,24 @@
 				      		<ba>发布人:{{from}}</ba>
 				      		<ba>日期:{{date}}</ba>			      	
 				    </div>
-				     <div class="xiugai" ng-click="jiejue(id)" ng-show="status=='已指派'">解决</div>
+				     
+				     <div class="xiugai" ng-click="jiejue(id)" ng-show='status=="已指派"'>修复bug</div>
 				  </div>
 				 
 		</div>
 
 		  
 </div>
-		 </div>
-		<!--  <div class="sort">
-			<ul class="pagination">
-					    <li><a href="JavaScript:;">&laquo;</a></li>
-					    <li><a href="JavaScript:;" >1</a></li>
-					    <li><a href="JavaScript:;">2</a></li>
-					    <li><a href="JavaScript:;">3</a></li>
-					    <li><a href="JavaScript:;">4</a></li>
-					    <li><a href="JavaScript:;">5</a></li>
-					    <li><a href="JavaScript:;">&raquo;</a></li>
-					  </ul>
-		</div>
-		  -->
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
+		 
+		 
+		  <div class="yi_top sort">
+		  	
+			<nav>
+			  <ul class="pager">
+			    <li ng-click="prev()"><a href="javaScript:;" >Previous</a></li>
+			    <li ng-click="next()"><a href="javaScript:;">Next</a></li>
+			  </ul>
+			</nav>
+		</div>
+		  

@@ -1,15 +1,17 @@
 <div id="test" >
-		<div class="test-left" ng-if="isopen" ng-click="isclose()"></div>
+		<div class="test-left" ng-if="isopen" ng-click="isclose($event)"></div>
 		<div class="test_right" ng-if="isopen">
 			<div class="test_title">{{titler}}</div>
 			<div class="choose_list">
 				<ul ng-click="isclose()">
 					<li ng-repeat="i in list[num].content" ng-click="output($event)">{{i.content1}}</li>
 				</ul>
-				<p contenteditable="true" ng-blur="output($event)">
+				<!--<p contenteditable="true" ng-blur="output($event)" ></p><-->
 					
-				</p>
-				<div text-angular ng-model="htmlVariable"></div>
+				<div ng-if="tshow"><div text-angular ng-model="htmlVariable"></div></div>
+				
+				
+				
 			</div>
 		</div>
 	
@@ -23,8 +25,8 @@
 		<div class="bug_row" ng-click="show()">
 			<div class="col-xs-3"><b>summary</b></div>
 			<div class="col-xs-9">
-				<input type="text" ng-model="m.summary"/>
-				<span class="row_r" ng-click="choose($event,0)"><i class="glyphicon glyphicon-chevron-right"></i></span>
+				<input type="text" ng-model="m.summary" placeholder="请输入简介"/>
+				<!--<span class="row_r" ng-click="choose($event,0)"><i class="glyphicon glyphicon-chevron-right"></i></span>-->
 			</div>
 		</div>
 		<div class="bug_row">

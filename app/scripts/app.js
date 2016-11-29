@@ -29,8 +29,12 @@ angular
 		controller:"webCtrl"
 	}).state("bgd",{
 		url:"/bgd",
-		templateUrl:"views/bgd.html",
+		templateUrl:"views/background.html",
 		controller:"bgdCtrl"
+	}).state("list",{
+		url:"/list",
+		templateUrl:"views/list.html",
+		controller:"listCtrl"
 	})
 }]);
 

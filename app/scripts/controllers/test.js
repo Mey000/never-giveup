@@ -1,14 +1,4 @@
 angular.module('quexianguanliApp').controller("testCtrl",['$scope','$state','$http','$rootScope','locals',function($scope,$state,$http,$rootScope,locals){
-	console.log(locals.get("uid",""));
-  $http({
-    url:"http://www.bugcenter.com.cn:1511/users/"+locals.get("uid",""),
-    method:"get"
-  }).success(function(e){
-    if(e.charactor==3){
-      $scope.isshow=true
-    }
-  })
-  console.log(locals.get("username",""));
   $http({
     url:"http://www.bugcenter.com.cn:1511/item",
     method:"get",
@@ -31,8 +21,20 @@ angular.module('quexianguanliApp').controller("testCtrl",['$scope','$state','$ht
   	$scope.isopen=true;
   	$scope.num=t;
   	console.log($scope.num)
-  }
+  	if($scope.titler=='description'){
+  		$scope.tshow=true;
+  	}else{
+  		$scope.tshow=false;
+  	}
    $scope.isclose=function(e){
+   	$scope.angular_text=$(e.target).next().find('.ta-resizer-handle-overlay').next().html();
+   	console.log($scope.angular_text);
+   $scope.m.description=$scope.angular_text
+   	$scope.isopen=false;
+   }
+  	
+  }
+   $scope.isclose=function(){
    	$scope.isopen=false;
    }
    $scope.commit=function(){
@@ -50,8 +52,6 @@ angular.module('quexianguanliApp').controller("testCtrl",['$scope','$state','$ht
    $scope.output=function(e){
    	$scope.isopen=false;
    if($scope.titler=='summary'){$scope.m.summary=$(e.target).html()}
-   if($scope.titler=='description'){$scope.m.description=$(e.target).html()}
-   
    if($scope.titler=='classify'){
    		$scope.classify=$(e.target).html()
    		if ($scope.classify=="UI设计") {
