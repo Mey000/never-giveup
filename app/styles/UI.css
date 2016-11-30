@@ -1,7 +1,7 @@
 *{margin: 0;padding: 0;}
 a{list-style: none;}
 .y_box{    margin-bottom: 2.2rem;}
-.y_top{position: fixed;left: 0;top: 0;width: 100%;background: #fff;}
+.y_top{position: fixed;left: 0;top: 0;width: 100%;background: #fff;z-index: 1;}
 			.y_nav{
 				height: 1.8rem;
 				width: 100%;
@@ -14,7 +14,7 @@ a{list-style: none;}
 .y_nt{width: 100%;height:5rem;background: #222222;border-top: 0.025rem solid #363636;    display: none; }
 .y_nt b{display: block;width: 100%;height:2rem;color:#b8b8b8;line-height: 2rem;padding-left: 0.7rem;}
 .y_nt span{display: block;width: 100%;height:2rem;color:#b8b8b8;line-height: 2rem;padding-left: 0.7rem;}
-.sou{margin-top: 1rem;    z-index: -11;}			
+.sou{margin-top: 1rem;z-index:0;}			
 .content{margin:0.95rem 0.76rem ;border:0.025rem solid #ccc;height:auto;    border-radius:0.2rem;height: 15.65rem;overflow:auto ;overflow-x: hidden;}
 .content span{display: block;border-bottom:0.025rem solid #ccc;padding:0.625rem 0.625rem 0 0.625rem ;word-wrap : break-word ;}
 .content span:nth-child(3n){border-bottom:none;}
