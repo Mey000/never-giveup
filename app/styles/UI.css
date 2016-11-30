@@ -2,18 +2,14 @@
 a{list-style: none;}
 .y_box{    margin-bottom: 2.2rem;}
 .y_top{position: fixed;left: 0;top: 0;width: 100%;background: #fff;z-index: 1;}
-			.y_nav{
-				height: 1.8rem;
-				width: 100%;
-				background: #222222;
-				border-bottom: 0.025rem solid #232323;
-			}
-
+.y_nav{	height: 1.8rem;width: 100%;background: #222222;border-bottom: 0.025rem solid #232323;}
 .y_nav span{float: left;display: block;height:1.6rem; ;font-size: 0.5rem;color: #fff;padding-left: 0.75rem;line-height: 1.6rem;}
 .y_nav p{float: right;width: 1.8rem;height: 1.6rem;background: #333333;color: #ffffff;line-height: 1.6rem;text-align: center;margin-right: 0.75rem;border-radius: 0.125rem;}
 .y_nt{width: 100%;height:5rem;background: #222222;border-top: 0.025rem solid #363636;    display: none; }
 .y_nt b{display: block;width: 100%;height:2rem;color:#b8b8b8;line-height: 2rem;padding-left: 0.7rem;}
 .y_nt span{display: block;width: 100%;height:2rem;color:#b8b8b8;line-height: 2rem;padding-left: 0.7rem;}
+
+
 .sou{margin-top: 1rem;z-index:0;}			
 .content{margin:0.95rem 0.76rem ;border:0.025rem solid #ccc;height:auto;    border-radius:0.2rem;height: 15.65rem;overflow:auto ;overflow-x: hidden;}
 .content span{display: block;border-bottom:0.025rem solid #ccc;padding:0.625rem 0.625rem 0 0.625rem ;word-wrap : break-word ;}
@@ -21,18 +17,10 @@ a{list-style: none;}
 .cwzy{height: 1rem;overflow: hidden; width: 100%}
 .da_1{height: 1rem;overflow: hidden; width: 100%}
 .da_1 zh{float: left; }
-.da_1 b{display: block;
-    width: 3rem;
-    height: 1rem;
-    float: right;
-    border-radius: 0.125rem;
-    line-height: 1rem;
-    text-align: center;
-    margin-left: 0.2rem;}
+.da_1 b{display: block; width: 3rem;height: 1rem;float: right;border-radius: 0.125rem;line-height: 1rem;text-align: center;margin-left: 0.2rem;}
 .content span:last-child{border-bottom:none;}
 .content ba{display: block;border-bottom:0.025rem solid #ccc;padding:0.6rem 0.3rem ;word-wrap : break-word ;}
 .modl{width: 13rem;margin:2.3rem auto;}
-
 .ba{border-radius:0.5rem 0.5rem 0 0 ;}
 .xiugai{width: 13rem;height:2rem;line-height:2rem;text-align: center;background: #337ab7;border-radius: 0 0 0.5rem 0.5rem;color: #fff;margin: auto;}
 .content ba:last-child{border-bottom:none;}
