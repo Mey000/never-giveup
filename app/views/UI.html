@@ -24,7 +24,7 @@
 </div>
 <div class="content">
 
-	<span ng-repeat="i in data | filter:{summary:ssss} | mky:a:3" ng-click="zy(i.id)" data-toggle="modal" data-target=".bs-example-modal-lg">
+	<span ng-repeat="i in data | filter:ssss | mky:a:3" ng-click="zy(i.id)" data-toggle="modal" data-target=".bs-example-modal-lg">
 		 		<p class="cwzy"> <b><zh>错误摘要</zh><a href="JavaScript:;" ng-class="{red:i.importance=='重要',yellow:i.importance=='中等',blue:i.importance=='一般'}">{{i.importance}}</a></b> </p>
 		 		<p >{{i.description|substr}}</p>	
 		 		<p class="da_1"><zh>{{i.date}}</zh> <b>{{i.status}}</b></p> 
