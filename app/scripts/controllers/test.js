@@ -58,7 +58,7 @@ angular.module('quexianguanliApp').controller("testCtrl",['$scope','$state','$ht
    			$scope.m.classify=0
    		} else if ($scope.classify=="前端"){
    			$scope.m.classify=1
-   		}	else if ($scope.classify=="前端"){
+   		}	else if ($scope.classify=="后台"){
    			$scope.m.classify=2
    		}
    }
