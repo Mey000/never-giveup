@@ -11,7 +11,7 @@ a{list-style: none;}
 
 
 .sou{margin-top: 1rem;z-index:0;}			
-.content{margin:0.95rem 0.76rem ;border:0.025rem solid #ccc;height:auto;    border-radius:0.2rem;height: 15.65rem;overflow:auto ;overflow-x: hidden;}
+.content{margin:0.95rem 0.76rem ;border:0.025rem solid #ccc;border-radius:0.2rem;height: 15.65rem;overflow:auto ;overflow-x: hidden;}
 .content span{display: block;border-bottom:0.025rem solid #ccc;padding:0.625rem 0.625rem 0 0.625rem ;word-wrap : break-word ;}
 .content span:nth-child(3n){border-bottom:none;}
 .cwzy{height: 1rem;overflow: hidden; width: 100%}
@@ -32,4 +32,7 @@ a{list-style: none;}
 .red1{background: orangered;}
 .cwzy zh{float: left;}
 .yi_top{position: fixed;left: 0;bottom: 0;width: 100%;}
+.yincang{display: block;}
+
+
 
