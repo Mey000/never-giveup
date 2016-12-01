@@ -1,17 +1,15 @@
 <div id="test" >
-		<div class="test-left" ng-if="isopen" ng-click="isclose($event)"></div>
-		<div class="test_right" ng-if="isopen">
+		<div class="test-left" ng-show="isopen" ng-click="isclose($event)"></div>
+		<div class="test_right" ng-show="isopen">
 			<div class="test_title">{{titler}}</div>
 			<div class="choose_list">
 				<ul ng-click="isclose()">
 					<li ng-repeat="i in list[num].content" ng-click="output($event)">{{i.content1}}</li>
 				</ul>
+				<div summernote ng-model="$parent.description" ng-if="tshow"></div>
+				
 				<!--<p contenteditable="true" ng-blur="output($event)" ></p><-->
-					
-				<div ng-if="tshow"><div text-angular ng-model="htmlVariable"></div></div>
-				
-				
-				
+				<!--<div ng-if="tshow"><div text-angular ng-model="htmlVariable"></div></div>-->
 			</div>
 		</div>
 	
@@ -32,28 +30,28 @@
 		<div class="bug_row">
 			<div class="col-xs-3"><b>classify</b></div>
 			<div class="col-xs-9">
-				<input type="text" ng-model="classify" placeholder="请选择"/>
+				<input type="text" ng-model="classify" placeholder="请选择" disabled="true "/>
 				<span class="row_r" ng-click="choose($event,1)"><i class="glyphicon glyphicon-chevron-right"></i></span>
 			</div>
 		</div>
 		<div class="bug_row">
 			<div class="col-xs-3"><b>importance</b></div>
 			<div class="col-xs-9">
-				<input type="text"  ng-model="importance" placeholder="请选择"/>
+				<input type="text"  ng-model="importance" placeholder="请选择" disabled="true "/>
 				<span class="row_r" ng-click="choose($event,2)"><i class="glyphicon glyphicon-chevron-right"></i></span>
 			</div>
 		</div>
 		<div class="bug_row">
 			<div class="col-xs-3"><b>description</b></div>
 			<div class="col-xs-9" >
-				<input type="text" ng-model="m.description"/>
+				<div class="description" ng-bind-html="description" ng-model="m.description" disabled="true "></div>
 				<span class="row_r" ng-click="choose($event,3)"><i class="glyphicon glyphicon-chevron-right"></i></span>
 			</div>
 		</div>
 		<div class="bug_row">
 			<div class="col-xs-3"><b>frequency</b></div>
 			<div class="col-xs-9">
-				<input type="text" ng-model="frequency" placeholder="请选择"/>
+				<input type="text" ng-model="frequency" placeholder="请选择" disabled="true "/>
 				<span class="row_r" ng-click="choose($event,4)"><i class="glyphicon glyphicon-chevron-right"></i></span>
 			</div>
 		</div>
@@ -67,16 +65,16 @@
 		<div class="bug_row">
 			<div class="col-xs-3"><b>to</b></div>
 			<div class="col-xs-9">
-				<input type="text" placeholder="请选择" ng-model="m.to"/>
+				<input type="text" placeholder="请选择" ng-model="m.to" disabled="true "/>
 				<span class="row_r" ng-click="choose($event,6)"><i class="glyphicon glyphicon-chevron-right"></i></span>
 			</div>
 		</div>
 		<div class="bug_row">
-			<div class="col-xs-3"><b>status</b></div>
+			<!--<div class="col-xs-3"><b>status</b></div>
 			<div class="col-xs-9">
-				<input type="text" ng-model="status"/>
+				<input type="text" ng-model="status" disabled="true "/>
 				<span class="row_r" ng-click="choose($event,7)"><i class="glyphicon glyphicon-chevron-right"></i></span>
-			</div>
+			</div>-->
 		</div>
 	</div>
 	

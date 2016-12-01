@@ -1,59 +1,56 @@
 <div class="y_box">
 	<div class="y_top">
-		<div class="y_nav" >
+		<div class="y_nav">
 			<span>BugCenter v0.3</span>
 			<p class="glyphicon glyphicon-th-list"></p>
 		</div>
-		<div class="y_nt" >
-				<b>当前用户：{{username}}</b>
-				<span ng-click="tc()">退出</span>
+		<div class="y_nt">
+			<b>当前用户：{{username}}</b>
+			<span ng-click="tc()">退出</span>
 		</div>
-<div class="pic_show">图标展示:</div>
-<div class="accordion" id="accordion2">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        importance 
-      </a>
-    </div>
-    <div id="collapseOne" class="accordion-body collapse">
-      <div class="accordion-inner" ng-controller="PolarAreaCtrl">
-        <canvas id="polar-area" class="chart chart-polar-area"
-	  		chart-data="data" chart-labels="labels" chart-options="options">
-		</canvas> 
-      </div>
-    </div>
-  </div>
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-       frequency 
-      </a>
-    </div>
-    <div id="collapseTwo" class="accordion-body collapse">
-      <div class="accordion-inner" ng-controller="PieCtrl">
-       <canvas id="Pie" class="chart chart-pie"
-	  chart-data="data" chart-labels="labels" chart-options="options">
-		</canvas> 
-      </div>
-    </div>
-  </div>
-   <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-        status 
-      </a>
-    </div>
-    <div id="collapseThree" class="accordion-body collapse">
-      <div class="accordion-inner" ng-controller="RadarCtrl">
-	<canvas id="radar" class="chart chart-radar"
-	  chart-data="data" chart-labels="labels" chart-options="options">
-	</canvas> 
-	</div>	
-    </div>
-  </div>
+		<div class="pic_show">图标展示:</div>
+		<div class="accordion" id="accordion2">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+						importance
+					</a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse">
+					<div class="accordion-inner">
+						
+						<canvas id="polar-area" class="chart chart-polar-area" chart-data="importance" chart-labels="labels" chart-options="options">
+		</canvas>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+						frequency
+					</a>
+				</div>
+				<div id="collapseTwo" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<canvas id="Pie" class="chart chart-pie" chart-data="frequency" chart-labels="labels2" chart-options="options">
+		</canvas>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+						status
+					</a>
+				</div>
+				<div id="collapseThree" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<canvas id="radar" class="chart chart-radar" chart-data="status" chart-labels="labels3" chart-options="options">
+	</canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </div>
-
-
-	 </div>
-</div>	

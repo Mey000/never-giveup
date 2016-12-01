@@ -34,12 +34,24 @@
     padding: .5rem 0rem .5rem 0rem;
     float: left;
 }
+.bug_div .bug_row .col-xs-3{
+	line-height: normal;
+}
 .bug_div .bug_row input{
 	text-indent: 0.5rem;
 	border:none;
 	outline: none;
 	width: 90%;
 	float: left;
+	background: #fff;
+}
+.bug_div .bug_row .description{
+	text-indent: 0.5rem;
+	border:none;
+	outline: none;
+	width: 90%;
+	float: left;
+	overflow: auto;
 }
 .bug_div .bug_row i{
 	color: #00aeef;
@@ -108,3 +120,9 @@
 	background: #00aeef;
 	font-weight: 600;
 }
+.m_box{margin-bottom: 5.2rem;background: #fff;}
+.m_content{margin:0.95rem 0.76rem ;border:0.025rem solid #ccc;height: 17.6rem;overflow:auto ;overflow-x: hidden;border-radius:0.2rem;border-bottom: 0;}
+.m_content span{display: block;border-bottom:0.025rem solid #ccc;padding:0.625rem 0.625rem 0 0.625rem ;word-wrap : break-word ;}
+.m_content span:last-child{border-bottom:none;}
+.m_content ba{display: block;border-bottom:0.025rem solid #ccc;padding:0.6rem 0.3rem ;word-wrap : break-word ;}
+.m_sou{z-index:-1;background: #fff;position: fixed;top: 3rem;left: 0;}

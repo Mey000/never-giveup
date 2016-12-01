@@ -23,13 +23,13 @@ angular.module('quexianguanliApp').controller("testCtrl",['$scope','$state','$ht
   	console.log($scope.num)
   	if($scope.titler=='description'){
   		$scope.tshow=true;
+  		
   	}else{
   		$scope.tshow=false;
+  		$('.note-editor .note-frame .panel .panel-default').hide()
   	}
    $scope.isclose=function(e){
-   	$scope.angular_text=$(e.target).next().find('.ta-resizer-handle-overlay').next().html();
-   	console.log($scope.angular_text);
-   $scope.m.description=$scope.angular_text
+   
    	$scope.isopen=false;
    }
   	
@@ -101,7 +101,6 @@ angular.module('quexianguanliApp').controller("testCtrl",['$scope','$state','$ht
   	{'content':[{'content1':'高'},{'content1':'低'}]},
   	{'content':[]},
   	{'content':[{'content1':'lnn'},{'content1':'jgr'},{'content1':'wyc'},{'content1':'csd'}]},
-  	{'content':[{'content1':'已指派'},{'content1':'已解决'},{'content1':'已关闭'}]},
   	]
  // 发布时间  
    $scope.showtime=function(){
@@ -109,8 +108,8 @@ angular.module('quexianguanliApp').controller("testCtrl",['$scope','$state','$ht
    	$scope.m.date=now.toLocaleString()
    	console.log($scope.m.date)
    }
-   
-   
+ //  发布状态
+  $scope.m.status="0";
 //   发布人
 	$scope.m.from=locals.get("username","")
 }])

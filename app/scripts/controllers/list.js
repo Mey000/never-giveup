@@ -11,7 +11,6 @@ angular.module('quexianguanliApp').controller('listCtrl',['$scope','$state','$ht
 		    method:"get",
 		    params:{'status':'1'}
 		  }).success(function(e){
-		  	console.log('1111111111'+e)
 			 $scope.data=e
 			 $scope.zy=function(n){
 			 	$scope.aaa=e[n]
@@ -27,7 +26,7 @@ angular.module('quexianguanliApp').controller('listCtrl',['$scope','$state','$ht
 			 		$http({
 				    url:"http://www.bugcenter.com.cn:1511/item/"+a,
 				    method:"put",
-				    data:{status:1}
+				    data:{status:2}
 				  }).success(function(e){
 				  		console.log(e)
 				})

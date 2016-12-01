@@ -10,11 +10,6 @@ angular.module('quexianguanliApp').filter('mky',function(){
 			$scope.fn=function(e){
 				$scope.s=e
 			}
-			
-			
-			
-			
-			
 		$http({
     		url:"http://www.bugcenter.com.cn:1511/users/"+locals.get("uid",""),
     		method:"get"
@@ -34,15 +29,10 @@ angular.module('quexianguanliApp').filter('mky',function(){
 		    method:"get",
 		    params:{'to':locals.get("username","")}
 		  }).success(function(e){
-		  	
 			 $scope.data=e
-			 
-			 //console.log($scope.datat)
 			 $scope.size=3;
 			$scope.a=0;
 			$scope.hhh = Math.ceil($scope.data.length/$scope.size)
-			//console.log(/*$scope.Le*/$scope.data.length)
-			//	console.log($scope.datalen)
 			$scope.prev=function(){
 				$scope.a--
 				if($scope.a<0){
@@ -86,15 +76,10 @@ angular.module('quexianguanliApp').filter('mky',function(){
 				 //错误的状态
 		    	if(e[i].status==0){
 		    		e[i].status="已指派";
-		    		
-		    		
 		    	}else if(e[i].status==1){
 		    		e[i].status="已解决";
-		    		
-		    		
 		    	}else{
 		    		e[i].status="已关闭";
-
 		    	}
 		    	//发生频率
 		    	if(e[i].frequency==0){
@@ -105,8 +90,6 @@ angular.module('quexianguanliApp').filter('mky',function(){
 		    	}
 			 }
 		  })
-		   //console.log($scope.datat)
-
 		  $(".y_nav p").click(function(){
 				$(".y_nt").toggle();
 			});
@@ -114,13 +97,6 @@ angular.module('quexianguanliApp').filter('mky',function(){
 		  	$state.go('login')
 		  	localStorage.clear()
 		  }
-
-		 
-		
-		
-
-		  
-
 }]).filter("substr",function(){
 	return function(e){
 		if(e!=""){
