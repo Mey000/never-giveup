@@ -5,6 +5,7 @@
 			<div class="choose_list">
 				<ul ng-click="isclose()">
 					<li ng-repeat="i in list[num].content" ng-click="output($event)">{{i.content1}}</li>
+					<!--<li ng-repeat="i in list[num].content" ng-click="output($event)">{{i.neirong[0].content1}}</li>-->
 				</ul>
 				<div summernote ng-model="$parent.description" ng-if="tshow"></div>
 				

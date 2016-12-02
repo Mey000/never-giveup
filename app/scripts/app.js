@@ -33,7 +33,7 @@ angular
 	}).state("bgd",{
 		url:"/bgd",
 		templateUrl:"views/background.html",
-		controller:"bgdtrl"
+		controller:"bgdCtrl"
 	}).state("list",{
 		url:"/list",
 		templateUrl:"views/list.html",

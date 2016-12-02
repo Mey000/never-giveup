@@ -95,7 +95,7 @@ angular.module('quexianguanliApp').controller("testCtrl",['$scope','$state','$ht
    }
    $scope.list=[
   	{'content':[]},
-  	{'content':[{'content1':'UI设计'},{'content1':'前端'},{'content1':'后台'}]},
+  	{'content':[{'content1':'UI设计','neirong':[{'content1':'lnn'}]},{'content1':'前端','neirong':[{'content1':'wyc'}]},{'content1':'后台','neirong':[{'content1':'jgr'}]}]},
   	{'content':[{'content1':'重要'},{'content1':'中等'},{'content1':'一般'}]},
   	{'content':[]},
   	{'content':[{'content1':'高'},{'content1':'低'}]},

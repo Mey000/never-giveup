@@ -38,7 +38,7 @@ angular.module('quexianguanliApp').controller('bgdCtrl',['$scope','$state','$htt
 				    method:"put",
 				    data:{status:2}
 				  }).success(function(e){
-				  		//console.log(e)
+				  location.reload()
 				})
 			 }
 			}

@@ -18,7 +18,7 @@
 
 <div class="m_sou col-lg-6">
 	<div class="input-group">
-		<input type="text" class="form-control">
+		<input type="text" class="form-control"  ng-model="ssss">
 		<span class="input-group-btn">
 			<button class="btn btn-default" ng-model="hh" type="button">搜索</button>
 		</span>
@@ -29,7 +29,7 @@
 
 
 <div class="m_content">
-	<span ng-repeat="i in data | filter:{summary:hh}" ng-click="zy($index)" data-toggle="modal" data-target=".bs-example-modal-lg">
+	<span ng-repeat="i in data | filter:ssss" ng-click="zy($index)" data-toggle="modal" data-target=".bs-example-modal-lg">
 		 		<p class="cwzy">
 		 			<b><zh>错误摘要</zh><a  href="JavaScript:;" ng-class="{red:i.importance=='重要',yellow:i.importance=='中等',blue:i.importance=='一般'}">{{i.importance}}</a>
 	</b>
